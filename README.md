@@ -69,17 +69,16 @@ Shramik-Profile/
 └── README.md
 
 💻 Running the Project Locally
-
 Follow these steps to run Shramik-Profile on your local machine.
 
 1. Clone the Repository
 git clone https://github.com/sarthak291005/Shramik-Profile.git
 
 Move into the project directory:
-
 cd Shramik-Profile
-2. Install Dependencies
 
+
+2. Install Dependencies
 Install the required frontend dependencies:
 
 npm install
@@ -100,25 +99,24 @@ npm run dev
 The frontend will be available at:
 
 http://localhost:5173
+
+
 5. Start the Backend
-
 Open a new terminal window and navigate to the project directory:
-
 cd Shramik-Profile
 
-Start the Express API:
-
+Start the Express API: 
 npm run dev:api
 
-The backend will run on:
 
+The backend will run on:
 http://localhost:8080
 
 You can check whether the backend is running by visiting:
-
 http://localhost:8080/api/health
-6. Run Frontend and Backend Together
 
+
+6. Run Frontend and Backend Together
 For the complete application experience, keep both servers running:
 
 Frontend
@@ -131,27 +129,19 @@ http://localhost:8080
 
 The frontend communicates with the backend through the available REST API endpoints.
 
+
 🔨 Development
+Create a production build: npm run build
 
-Create a production build:
+Preview the production build: npm run preview
 
-npm run build
+Run the project's linting checks: npm run lint
 
-Preview the production build:
-
-npm run preview
-
-Run the project's linting checks:
-
-npm run lint
 
 🌐 Deployment
-
 The project is currently deployed using Render.
+Deployment configuration is maintained in: render.yaml
 
-Deployment configuration is maintained in:
 
-render.yaml
 🎯 Vision
-
 Shramik-Profile aims to turn informal workers into recognized professionals by making their skills, experience, and reputation more visible and portable.
