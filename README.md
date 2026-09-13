@@ -1,110 +1,157 @@
-# Shramik Profile Web App
+# Shramik-Profile 🇮🇳
 
-Modern React + Vite single-page product website for the Shramik platform.
+> **Where Skill Meets Trust, Where Work Earns Dignity.**
 
-## Run Locally
+Shramik-Profile is a digital identity and trust platform designed to empower India's informal workforce with a portable professional identity and verified work history.
 
-1. Install dependencies:
+The platform helps workers build a **Digital Trust Resume** containing their skills, experience, ratings, and professional reputation. It also helps families, societies, and enterprises discover and hire workers through structured profiles and trust signals.
 
-```bash
+## 🚀 Features
+
+- 👷 Digital worker profiles
+- ⭐ Verified ratings and reviews
+- 🔎 Worker search and filtering
+- 📍 Location-based worker discovery
+- 🏠 Family hiring flow
+- 🏢 Society management
+- 🏭 Enterprise hiring
+- 📱 Mobile-friendly interface
+- 🇮🇳 Hindi / regional-language support
+- 🔊 Read-aloud and Easy Mode
+- 📊 Worker experience and trust information
+- 🔐 Role-based user flows
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+
+### Backend
+- Node.js
+- Express.js
+- REST API
+
+### Data Storage
+- JSON-based storage
+
+### Deployment
+- Render
+
+## 📂 Project Structure
+
+```text
+Shramik-Profile/
+│
+├── backend/
+│   ├── data/
+│   │   ├── workers.json
+│   │   └── contact-submissions.json
+│   └── server.js
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── Dockerfile.api
+├── docker-compose.yml
+├── render.yaml
+├── package.json
+├── package-lock.json
+└── README.md
+
+💻 Running the Project Locally
+
+Follow these steps to run Shramik-Profile on your local machine.
+
+1. Clone the Repository
+git clone https://github.com/sarthak291005/Shramik-Profile.git
+
+Move into the project directory:
+
+cd Shramik-Profile
+2. Install Dependencies
+
+Install the required frontend dependencies:
+
 npm install
-```
+3. Configure Environment Variables
 
-2. Configure frontend API URL:
+Create a local environment file using the example provided:
 
-```bash
-copy .env.example .env
-```
+cp .env.example .env
 
-3. Start frontend development server:
+Update the values in .env if required.
 
-```bash
+4. Start the Frontend
+
+Run the Vite development server:
+
 npm run dev
-```
 
-4. Start backend API (separate terminal):
+The frontend will be available at:
 
-```bash
-npm run dev:api
-```
-
-5. Open:
-
-```text
 http://localhost:5173
-```
+5. Start the Backend
 
-Backend health endpoint:
+Open a new terminal window and navigate to the project directory:
 
-```text
+cd Shramik-Profile
+
+Start the Express API:
+
+npm run dev:api
+
+The backend will run on:
+
+http://localhost:8080
+
+You can check whether the backend is running by visiting:
+
 http://localhost:8080/api/health
-```
+6. Run Frontend and Backend Together
 
-## Production Build
+For the complete application experience, keep both servers running:
 
-```bash
+Frontend
+http://localhost:5173
+
+        ↓
+
+Express API
+http://localhost:8080
+
+The frontend communicates with the backend through the available REST API endpoints.
+
+🔨 Development
+
+Create a production build:
+
 npm run build
-```
 
-Generated output will be in `dist/`.
+Preview the production build:
 
-Preview production build locally:
-
-```bash
 npm run preview
-```
 
-## Deployment
+Run the project's linting checks:
 
-### Option 1: Render (frontend + backend)
+npm run lint
 
-This repository includes `render.yaml` for Blueprint deployment.
+🌐 Deployment
 
-1. Push this folder to GitHub.
-2. In Render, create a Blueprint from repo.
-3. Render creates:
-	- `shramik-api` (Node web service, start command: `npm run start:api`)
-	- `shramik-web` (static site, build command: `npm run build`, publish: `dist`)
-4. Confirm environment variables:
-	- API service: `FRONTEND_ORIGIN=https://shramik-web.onrender.com`
-	- Web service: `VITE_API_BASE_URL=https://shramik-api.onrender.com`
-5. Redeploy both services after env updates.
+The project is currently deployed using Render.
 
-### Option 2: Vercel (frontend only)
+Deployment configuration is maintained in:
 
-1. Push this folder to GitHub.
-2. Import repository in Vercel.
-3. Build settings:
-	- Build command: `npm run build`
-	- Output directory: `dist`
-4. Deploy.
+render.yaml
+🎯 Vision
 
-Backend can be hosted separately on Render/Railway using `npm run start:api`.
-
-### Option 3: Netlify (frontend only)
-
-1. Push this folder to GitHub.
-2. Import repository in Netlify.
-3. Build settings:
-	- Build command: `npm run build`
-	- Publish directory: `dist`
-4. Deploy.
-
-Backend can be hosted separately on Render/Railway using `npm run start:api`.
-
-### Option 4: Docker Compose (local full stack)
-
-```bash
-docker compose up --build
-```
-
-Services:
-- frontend: `http://localhost:5173`
-- backend: `http://localhost:8080`
-
-## Project Notes
-
-- `src/App.jsx` contains the full UI and routing logic.
-- `src/index.css` contains only base reset styles for clean layout behavior.
-- `backend/server.js` contains API routes for health, workers, and contact submissions.
-- `backend/.env.example` lists backend environment variables.
+Shramik-Profile aims to turn informal workers into recognized professionals by making their skills, experience, and reputation more visible and portable.
